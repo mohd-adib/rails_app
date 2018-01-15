@@ -16,7 +16,8 @@ set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', '
 set :config_example_suffix, '.example'
 set :config_files, %w{config/database.yml config/secrets.yml}
 set :rvm_ruby_version, '2.5.0'
-execute :sudo, "passenger-config restart-app --ignore-app-not-running #{deploy_to}"
+
+
 namespace :logs do
   desc "tail rails logs" 
   task :tail_rails do
