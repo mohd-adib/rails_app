@@ -17,6 +17,7 @@ set :config_example_suffix, '.example'
 set :config_files, %w{config/database.yml config/secrets.yml}
 set :rvm_ruby_version, '2.5.0'
 
+set :passenger_restart_with_touch, true
 
 namespace :logs do
   desc "tail rails logs" 
